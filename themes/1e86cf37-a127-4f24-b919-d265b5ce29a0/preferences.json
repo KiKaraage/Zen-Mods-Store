@@ -1,0 +1,18 @@
+[
+  {
+    "property": "uc.extension.view",
+    "label": "Present the extensions as...",
+    "type": "dropdown",
+    "defaultValue": "list",
+    "options": [
+        {
+            "label": "List",
+            "value": "list"
+        },
+        {
+            "label": "Grid",
+            "value": "grid"
+        }
+    ]
+  }
+]
