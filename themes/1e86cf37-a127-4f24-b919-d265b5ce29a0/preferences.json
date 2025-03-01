@@ -1,6 +1,6 @@
 [
   {
-    "property": "uc.extension.view",
+    "property": "mod.extension.view",
     "label": "Present the extensions as...",
     "type": "dropdown",
     "defaultValue": "list",
