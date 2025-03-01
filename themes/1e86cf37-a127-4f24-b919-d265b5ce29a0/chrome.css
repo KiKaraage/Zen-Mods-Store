@@ -1,4 +1,4 @@
-@media:has(#mod-extensions[mod-extension-view="list"]) {
+@media not (-moz-bool-pref: "mod.extension.viewgrid") {
   /* Hide header, description, extension captions */
   #unified-extensions-view box.panel-header,
   #unified-extensions-description,
@@ -51,7 +51,7 @@
   }
 }
 
-@media:has(#mod-extensions[mod-extension-view="grid"]) {
+@media (-moz-bool-pref: "mod.extension.viewgrid") {
   /* Set width of Unified Extension View */
   #unified-extensions-view {
     width: calc(var(--menu-panel-width) - 75px) !important;
@@ -118,5 +118,26 @@
   }
   #unified-extensions-view toolbarseparator {
     margin-top: 12px !important;
+  }
+}
+
+@media (-moz-bool-pref: "mod.extension.hide") {
+  :root:not([customizing]){
+    #unified-extensions-button {
+      opacity: 0 !important;
+      transition: opacity 0.2s ease;
+    }
+
+    #unified-extensions-button:hover {
+      opacity: 1 !important;
+    }
+  }
+}
+
+@media (-moz-bool-pref: "mod.extension.remove") {
+  :root:not([customizing]){
+    #unified-extensions-button {
+      display: none !important;
+    }
   }
 }
