@@ -45,7 +45,7 @@
     #context_zenSplitTabs[disabled], #context_closeDuplicateTabs[disabled]{
       display: none;
     }
-    :nth-child(28), :nth-child(34) {
+    :nth-child(28), :nth-child(34), :nth-child(43) {
       display: none;
     }
   }
@@ -91,7 +91,7 @@
 /* Apply Zen workspace accent color to all context menu and panels*/
 @media -moz-pref("uc.fixcontext.applyzenaccent") {
   menupopup, panel {
-    --panel-background: color-mix(in srgb, var(--zen-primary-color) 50%, var(--zen-colors-tertiary)) !important;
+    --panel-background: color-mix(in srgb, var(--zen-primary-color) 40%, var(--zen-colors-tertiary)) !important;
   }
 }
 
