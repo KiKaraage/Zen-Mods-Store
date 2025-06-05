@@ -26,9 +26,8 @@
         "type": "checkbox"
     },
     {
-        "property": "uc.hidecontext.exticons",
-        "label": "🧩 Hide icons for extensions options (enabled by default)",
-        "defaultValue": "true",
+        "property": "uc.hidecontext.icons",
+        "label": "🔣 Hide all icons in context menu, except checkboxes and radio buttons, to fit current Zen styling",
         "type": "checkbox"
     },
     {
@@ -103,7 +102,7 @@
     },
     {
         "property": "uc.hidecontext.searchinpriv",
-        "label": "🔤🔗 Hide 'Search in a Private Window' (enabled by default)",
+        "label": "🔤 🔗 Hide 'Search in a Private Window' (enabled by default)",
         "defaultValue": "true",
         "type": "checkbox"
     },
