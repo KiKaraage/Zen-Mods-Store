@@ -12,7 +12,8 @@
     #context_pinTab,
     #context_pinSelectedTabs,
     #context_unpinTab,
-    #context_unpinSelectedTabs {
+    #context_unpinSelectedTabs,
+    #context_zenSplitTabs:not([disabled="true"]) {
       order: -8 !important;
     }
     #context_duplicateTab,
@@ -42,10 +43,11 @@
     #context_zen-replace-pinned-url-with-current {
       order: 2;
     }
-    #context_zenSplitTabs[disabled], #context_closeDuplicateTabs[disabled]{
-      display: none;
-    }
-    :nth-child(28), :nth-child(34), :nth-child(43) {
+    #context_zenSplitTabs[label="Split Tab (multiple selected tabs needed)"],
+    #context_zenSplitTabs[disabled="true"],
+    #context_closeDuplicateTabs[disabled],
+    #context_zen-pinned-tab-separator,
+    :nth-child(28), :nth-child(43) {
       display: none;
     }
   }
@@ -60,18 +62,19 @@
     padding-block: 0px !important;
   }
 }
-/* Hide extension icons in tabs and content area context menu to fit current Zen styling */
-@media -moz-pref("uc.hidecontext.exticons") {
-  #tabContextMenu, #contentAreaContextMenu {
-    .menuitem-iconic:not(
-    [id="context-back"],
-    [id="context-forward"],
-    [id="context-reload"],
-    [id="context-stop"],
-    [id="context-bookmarkpage"]
-    ) {
-      > .menu-icon {
-        display: none !important;
+/* Hide all icons in context menu, except checkboxes and radio buttons, to fit current Zen styling */
+@media -moz-pref("uc.hidecontext.icons") {
+  .textbox-contextmenu,
+  menupopup:has(menuitem[type="radio"], menuitem[type="checkbox"]),
+  menu:has(menuitem[type="radio"], menuitem[type="checkbox"]) {
+    .menu-icon {
+      display: none !important;
+    }
+    menuitem[type="radio"],
+    menuitem[type="checkbox"],
+    #context-navigation {
+      .menu-icon {
+        display: block !important;
       }
     }
   }
